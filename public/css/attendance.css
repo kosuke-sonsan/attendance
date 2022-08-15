@@ -1,0 +1,121 @@
+.header{
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.title_1 {
+  display: flex;
+  box-sizing: border-box;  
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+.menu {
+  margin: 0 5% 0 auto;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  list-style: none;
+}
+
+ul {
+  display: flex;
+}
+
+header .menu li {
+  margin: 5px 0 5px 40px;
+  list-style-type: none;
+
+}
+
+header .menu li:first-child {
+  margin-left: 0;
+}
+
+header .menu li a {
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #333;
+}
+
+header .navi li a:hover {
+  text-decoration: underline;
+}
+
+.nav_list_1 {
+  display: inline;
+  margin-top: 2%;
+  font-size: 20px;
+}
+
+.main {
+  box-sizing: border-box;
+  background-color: #DCDCDC;
+  width: 100%;
+  height: 93vh;
+  position: relative;
+  padding-top: 5%;
+  z-index: 1;
+}
+
+.title_2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.button_1 {
+  position: absolute;
+  margin-left: 18%;
+  padding: 8% 12%;
+  font-size: x-large;
+  background-color: white;
+  border: none;
+}
+
+.button_2 {
+  position: absolute;
+  margin-left: 51%;
+  padding: 8% 12%;
+  font-size: x-large;
+    background-color: white;
+    border: none;
+}
+
+.button_3 {
+  position: absolute;
+  margin-left: 18%;
+  margin-top: 20%;
+  padding: 8% 12%;
+  font-size: x-large;
+    background-color: white;
+    border: none;
+}
+
+.button_4 {
+  position: absolute;
+  margin-left: 51%;
+  margin-top: 20%;
+  padding: 8% 12%;
+  font-size: x-large;
+    background-color: white;
+    border: none;
+}
+
+.footer_text {
+  text-align: center;
+}
