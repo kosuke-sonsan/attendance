@@ -17,7 +17,9 @@ use App\Http\Controllers\WorkController;
 |
 */
 
-Route::get('/', [ClockController::class, 'index'])->name('attendance.view');
+Route::get('/', [ClockController::class, 'index'])->name('mainpage.view');
+
+Route::get('/attendance', [WorkController::class, 'index'])->name('attendance.view');
 
 // Route::get('/', function () {
 //     return view('welcome');

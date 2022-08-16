@@ -1,3 +1,5 @@
+/* index,attendance共通css */
+
 .header{
   width: 100%;
   height: 10%;
@@ -18,7 +20,7 @@
 .title_1 {
   display: flex;
   box-sizing: border-box;  
-  font-size: 50px;
+  font-size: 3em;
   font-weight: bold;
   margin-left: 5%;
 }
@@ -60,7 +62,7 @@ header .navi li a:hover {
 .nav_list_1 {
   display: inline;
   margin-top: 2%;
-  font-size: 20px;
+  font-size: 1em;
 }
 
 .main {
@@ -73,49 +75,62 @@ header .navi li a:hover {
   z-index: 1;
 }
 
+.footer_text {
+  text-align: center;
+}
+
+/* index用css記述 */
+
 .title_2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 .button_1 {
   position: absolute;
   margin-left: 18%;
-  padding: 8% 12%;
+  margin-top: 1%;
+  padding: 6% 12%;
   font-size: x-large;
   background-color: white;
   border: none;
+  border-radius: 3%;
 }
 
 .button_2 {
   position: absolute;
   margin-left: 51%;
-  padding: 8% 12%;
+  margin-top: 1%;
+  padding: 6% 12%;
   font-size: x-large;
-    background-color: white;
-    border: none;
+  background-color: white;
+  border: none;
+  border-radius: 3%;
 }
 
 .button_3 {
   position: absolute;
   margin-left: 18%;
-  margin-top: 20%;
-  padding: 8% 12%;
+  margin-top: 19%;
+  padding: 6% 12%;
   font-size: x-large;
-    background-color: white;
-    border: none;
+  background-color: white;
+  border: none;
+  border-radius: 3%;
 }
 
 .button_4 {
   position: absolute;
   margin-left: 51%;
-  margin-top: 20%;
-  padding: 8% 12%;
+  margin-top: 19%;
+  padding: 6% 12%;
   font-size: x-large;
-    background-color: white;
-    border: none;
+  background-color: white;
+  border: none;
+  border-radius: 3%;
 }
 
-.footer_text {
-  text-align: center;
+/* attendance用css記述 */
+
+.table {
 }
