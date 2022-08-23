@@ -1,113 +1,36 @@
-/* index,attendance共通css */
+/* attendance用css記述 */
 
-.header{
-  width: 100%;
-  height: 10%;
-  background-color: white;
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
+.main {
+    box-sizing: border-box;
+    background-color: #DCDCDC;
+    width: 100%;
+    height: 93vh;
+    padding-top: 5%;
 }
 
-.header_inner {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.header_title {
-  display: flex;
-  box-sizing: border-box;  
-  font-size: 3em;
-  font-weight: bold;
-  margin-left: 5%;
-}
-
-.header_menu {
-  margin: 0 5% 0 auto;
-  padding: 0;
-  font-size: 14px;
-  font-weight: bold;
-  display: flex;
-  list-style: none;
-}
-
-ul {
-  display: flex;
-}
-
-header .header_menu li {
-  margin: 5px 0 5px 40px;
-  list-style-type: none;
-
-}
-
-header .header_menu li:first-child {
-  margin-left: 0;
-}
-
-header .header_menu li a {
-  display: block;
-  box-sizing: border-box;
-  text-decoration: none;
-  color: #333;
-}
-
-header .navi li a:hover {
-  text-decoration: underline;
-}
-
-.header_nav_list {
-  display: inline;
-  margin-top: 2%;
-  font-size: 1em;
-}
-
-.footer_text {
-  text-align: center;
-  padding-top: 1%;
-}
-
-/* index用css記述 */
-
-.attendance_main {
-  box-sizing: border-box;
-  background-color: #DCDCDC;
-  width: 100%;
-  height: 93vh;
-  position: relative;
-  padding-top: 5%;
-  z-index: 1;
-}
-
-.attendance_title {
-  text-align: center;
-  font-size: 2em;
-  margin-top: 3%;
-}
-
-.attendance_position {
+.day_button_position {
   display: flex;
   justify-content: center;
 }
 
-.attendance_button {
-  box-sizing: border-box;
-  padding: 90px 180px;
+.day_button {
+  border-color: blue;
+  color: blue;
+  margin: 2% 4%;
+  font-size: larger;
+}
+
+.date {
+  margin-top: 2%;
   font-size: x-large;
-  background-color: white;
-  border: none;
-  border-radius: 3%;
-  writing-mode: horizontal-tb;
 }
-
-.attendance_button:nth-child(n+1) {
-  margin: 30px;
-}
-
-/* attendance用css記述 */
 
 .table {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table_text {
+  font-size: larger;
 }

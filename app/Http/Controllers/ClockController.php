@@ -8,6 +8,6 @@ class ClockController extends Controller
 {
     public function index()
     {
-        return view('layouts/index');
+        return view('index');
     }
 }
