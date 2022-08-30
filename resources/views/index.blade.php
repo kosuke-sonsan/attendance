@@ -1,7 +1,6 @@
-@extends('layouts.index')
+@extends('layouts.app')
 
 @section('content')
-@include('components.header')
 
   <!--  attendance  -->
   
@@ -33,6 +32,5 @@
       </form>
     </div>
   </div>
-  
-@include('components.footer')
+
 @endsection

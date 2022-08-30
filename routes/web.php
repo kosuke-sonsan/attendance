@@ -5,6 +5,7 @@ use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\ClockController;
 use App\Http\Controllers\RestController;
 use App\Http\Controllers\WorkController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,20 @@ use App\Http\Controllers\WorkController;
 |
 */
 
+/*  認証ページ用ルート記述  */
+
+Route::get('/login', [AuthController::class, 'index'])->name('login.view');
+
+/*  会員登録ページ用ルート記述  */
+
+Route::get('/register', [AuthController::class, 'view'])->name('register.view');
+
+/*  ログイン後ページ用ルート記述  */
+
 Route::get('/', [ClockController::class, 'index'])->name('mainpage.view');
 
 Route::get('/attendance', [WorkController::class, 'index'])->name('attendance.view');
+
 
 // Route::get('/', function () {
 //     return view('welcome');

@@ -1,7 +1,6 @@
-@extends('layouts.attendance')
+@extends('layouts.app')
 
-@section('attendance')
-@include('components.header')
+@section('content')
   
   <div class="main">
   
@@ -17,24 +16,23 @@
   
     <table class="table">
       
-      <tr class="table_text">
-        <th>名前</th>
-        <th>勤務開始</th>
-        <th>勤務終了</th>
-        <th>休憩時間</th>
-        <th>勤務時間</th>
+      <tr>
+        <th class="table_text">名前</th>
+        <th class="table_text">勤務開始</th>
+        <th class="table_text">勤務終了</th>
+        <th class="table_text">休憩時間</th>
+        <th class="table_text">勤務時間</th>
       </tr>
     
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="attendance_text"></td>
+      <td class="attendance_text"></td>
+      <td class="attendance_text"></td>
+      <td class="attendance_text"></td>
+      <td class="attendance_text"></td>
     </tr>
     </table>
   
   </div>
-@include('components.footer')
 
 @endsection

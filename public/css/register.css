@@ -1,0 +1,65 @@
+.register_main {
+  box-sizing: border-box;
+  background-color: #DCDCDC;
+  width: 100%;
+  height: 93vh;
+  padding-top: 5%;
+}
+
+.register_title {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 5%;
+}
+
+.register_name {
+  background-color: #DCDCDC;
+  margin-top: 3%;
+  margin-left: 36.5%;
+  width: 25%;
+  padding: 1% 0 1% 1%;
+  border-radius: 5%;
+}
+
+.register_email {
+  background-color: #DCDCDC;
+  margin-top: 2%;
+  margin-left: 36.5%;
+  width: 25%;
+  padding: 1% 0 1% 1%;
+  border-radius: 5%;
+}
+
+.register_password {
+  background-color: #DCDCDC;
+  margin-top: 2%;
+  margin-left: 36.5%;
+  width: 25%;
+  padding: 1% 0 1% 1%;
+  border-radius: 5%;
+}
+
+.register_button {
+  background-color: #0000CD;
+  color: white;
+  margin-top: 2%;
+  margin-left: 36.5%;
+  width: 26.5%;
+  padding: 1% 0;
+  border-radius: 5%;
+}
+
+.register_attention {
+  text-align: center;
+  margin-top: 1%;
+  color: #C0C0C0;
+}
+
+.register_login {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-top: 0.5%;
+  margin-left: auto;
+  margin-right: auto;
+}

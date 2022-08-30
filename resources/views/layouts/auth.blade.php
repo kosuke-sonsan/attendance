@@ -7,10 +7,15 @@
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
   <link rel="stylesheet" href="{{ asset('css/index.css') }}">
   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/register.css') }}">
   <title>login</title>
 </head>
 
 <body>
-  @yield('login')
+  @component('components.login-header')
+  @endcomponent
+  @yield('content')
+  @component('components.footer')
+  @endcomponent
 </body>
 </html>
