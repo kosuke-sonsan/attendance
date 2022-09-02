@@ -20,11 +20,12 @@ use App\Http\Controllers\AuthController;
 
 /*  認証ページ用ルート記述  */
 
-Route::get('/login', [AuthController::class, 'index'])->name('login.view');
+Route::get('/login', [AuthController::class, 'index_login'])->name('login.view');
 
 /*  会員登録ページ用ルート記述  */
 
-Route::get('/register', [AuthController::class, 'view'])->name('register.view');
+Route::get('/register', [AuthController::class, 'index_register'])->name('register.view');
+Route::post('/register', [AuthController::class, 'register'])->name('register.register');
 
 /*  ログイン後ページ用ルート記述  */
 
