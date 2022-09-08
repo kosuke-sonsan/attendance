@@ -1,11 +1,12 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\ClockController;
 use App\Http\Controllers\RestController;
 use App\Http\Controllers\WorkController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AttendanceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,20 +19,34 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-/*  認証ページ用ルート記述  */
-
-Route::get('/login', [AuthController::class, 'index_login'])->name('login.view');
-
 /*  会員登録ページ用ルート記述  */
 
 Route::get('/register', [AuthController::class, 'index_register'])->name('register.view');
 Route::post('/register', [AuthController::class, 'register'])->name('register.register');
 
+/*  認証ページ用ルート記述  */
+
+Route::get('/login', [AuthController::class, 'index_login'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.login');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout.logout');
+
 /*  ログイン後ページ用ルート記述  */
+Route::group(['middleware' => 'auth'], function(){
+  
+  /*  メインページ表示用ルーティング  */
+  Route::get('/', [ClockController::class, 'index'])->name('mainpage.view');
+  
+  /*  勤怠管理用ルーティング  */
+  
+  Route::post('/attendance/start', [AttendanceController::class, 'start'])->name('attendance.start');
+  
+  /*  日付別勤怠管理画面表示用ルーティング  */
+  
+  Route::get('/attendance', [WorkController::class, 'index'])->name('attendance.view');  
+  
+});
 
-Route::get('/', [ClockController::class, 'index'])->name('mainpage.view');
 
-Route::get('/attendance', [WorkController::class, 'index'])->name('attendance.view');
 
 
 // Route::get('/', function () {

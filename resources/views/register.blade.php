@@ -18,7 +18,7 @@
     </form>
     
     <p class="register_attention">アカウントをお持ちの方はこちら</p>
-    <a href="" style="text-decoration: none;">
+    <a href="/login" style="text-decoration: none;">
       <p class="register_login">ログイン</p>
     </a>
 
