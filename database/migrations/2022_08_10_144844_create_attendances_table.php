@@ -17,10 +17,10 @@ class CreateAttendancesTable extends Migration
             $table->id();
             $table->foreign('users_id');
             $table->date('date')->nullable();
-            $table->time('start_time')->nullable();
+            $table->time('start_time')->useCurrent()->nullable();
             $table->time('end_time');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('updated_at')->useCurrent()->nullable();
+            $table->timestamp('created_at')->useCurrent()->nullable();
         });
     }
 
