@@ -15,12 +15,13 @@ class CreateAttendancesTable extends Migration
     {
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
-            $table->foreign('users_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unique(['user_id']);
             $table->date('date')->nullable();
             $table->time('start_time')->useCurrent()->nullable();
             $table->time('end_time');
-            $table->timestamp('updated_at')->useCurrent()->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
+            $table->timestamp('updated_at')->useCurrent()->nullable();
         });
     }
 
