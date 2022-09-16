@@ -10,6 +10,14 @@ class Attendance extends Model
     use HasFactory;
     
     protected $fillable = [
+        'user_id',
+        'date',
         'start_time',
+        'end_time',
     ];
+    
+    public function user()
+    {
+        $this->belongsTo(User::class);
+    }
 }

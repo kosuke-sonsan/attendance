@@ -14,7 +14,7 @@
         <button class="attendance_button" name="start_time">勤務開始</button>
       </form>
     
-      <form action="" method="post">
+      <form action="/attendance/stop" method="post">
         @csrf
         <button class="attendance_button" name="end_time">勤務終了</button>
       </form>

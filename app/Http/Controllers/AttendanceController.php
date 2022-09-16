@@ -3,27 +3,64 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Attendance;
-use Illuminate\Support\Facades\DB;
 
 class AttendanceController extends Controller
 {
-    public function start(Request $request)
+    /*  勤務開始用  */
+    public function start()
     {
-        $user = Attendance::all()->where('id', $request->id)->first();
+        $user = Auth::user();
+        $user_id = $user->id;
         
-        if(DB::table('attendances')->where('id', $request->id)->exists() && [$request->id === $users->id])
-        {
-            return redirect('/');
-        } else {
-            $start_time = $request->start_time;
-            
-            Attendance::create([
-                'start_time' => $start_time,
-            ]);
-            
+        $latestAttendance = Attendance::where('user_id', $user_id)->latest()->first();
+        
+        $latestAttendanceDate = '';
+        
+        if($latestAttendance){
+            $latestAttendanceDate = $latestAttendance->date;
+        }
+        
+        $today = Carbon::today();
+        $todayDate = $today->format('Y-m-d');
+        
+        if($latestAttendanceDate === $todayDate){
             return redirect('/');
         }
+        
+        Attendance::create([
+            'user_id' => $user_id,
+            'date' => $todayDate,
+            'start_time' => Carbon::now(),
+        ]);
+        
+        return redirect('/');
+    }
+    
+    /*  退勤用  */
+    
+    public function stop()
+    {
+        $user = Auth::user();
+        $user_id = $user->id;
+        
+        $latestAttendance = Attendance::where('user_id', $user_id)->latest()->first();
+        
+        $latestAttendanceDate = '';
+        
+        if($latestAttendance){
+            $latestAttendanceDate = $latestAttendance->end_time;
+        }
+        
+        $today = Carbon::today();
+        $todayDate = $today->format('Y-m-d');
+        
+        $latestAttendance->update([
+            'end_time' => Carbon::now(),
+        ]);
+        
+        return redirect('/');
     }
 }

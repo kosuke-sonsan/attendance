@@ -39,6 +39,7 @@ Route::group(['middleware' => 'auth'], function(){
   /*  勤怠管理用ルーティング  */
   
   Route::post('/attendance/start', [AttendanceController::class, 'start'])->name('attendance.start');
+  Route::post('/attendance/stop', [AttendanceController::class, 'stop'])->name('attendance.stop');
   
   /*  日付別勤怠管理画面表示用ルーティング  */
   
