@@ -6,9 +6,10 @@
   
   <!--  pagenation  -->
   
+  @foreach($attendance as $recode)
     <div class="day_button_position">
       <button class="day_button"><</button>
-        <p class="date">{{}}</p>
+        <p class="date">{{$recode->date}}</p>
       <button class="day_button">></button> 
     </div>
   
@@ -24,13 +25,14 @@
         <th class="table_text">勤務時間</th>
       </tr>
     
-    <tr>
-      <td class="attendance_text"></td>
-      <td class="attendance_text"></td>
-      <td class="attendance_text"></td>
-      <td class="attendance_text"></td>
-      <td class="attendance_text"></td>
-    </tr>
+      <tr>
+        <td class="attendance_text">{{Auth::user()->name}}</td>
+        <td class="attendance_text">{{$recode->start_time}}</td>
+        <td class="attendance_text">{{$recode->end_time}}</td>
+        <td class="attendance_text"></td>
+        <td class="attendance_text"></td>
+      </tr>
+    @endforeach
     </table>
   
   </div>

@@ -21,12 +21,12 @@
     </div>
     
     <div class="attendance_position">
-      <form action="" method="post">
+      <form action="/rest/start" method="post">
         @csrf
         <button class="attendance_button" name="rest_start">休憩開始</button>
       </form>
     
-      <form action="" method="post">
+      <form action="/rest/end" method="post">
         @csrf
         <button class="attendance_button" name="rest_end">休憩終了</button>
       </form>

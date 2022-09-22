@@ -10,8 +10,8 @@ class Rest extends Model
     use HasFactory;
     
         protected $fillable = [
-        'user_id',
-        'rest_start',
-        'rest_end',
+        'attendance_id',
+        'start_time',
+        'end_time',
     ];
 }

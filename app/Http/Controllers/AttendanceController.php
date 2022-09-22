@@ -41,7 +41,7 @@ class AttendanceController extends Controller
     
     /*  退勤用  */
     
-    public function stop()
+    public function end()
     {
         $user = Auth::user();
         $user_id = $user->id;
@@ -51,11 +51,20 @@ class AttendanceController extends Controller
         $latestAttendanceDate = '';
         
         if($latestAttendance){
-            $latestAttendanceDate = $latestAttendance->end_time;
+            $latestAttendanceDate = $latestAttendance->date;
+            $latestAttendanceEndTime = $latestAttendance->end_time;
         }
         
         $today = Carbon::today();
         $todayDate = $today->format('Y-m-d');
+        
+        if($latestAttendanceDate !== $todayDate){
+            return redirect('/');
+        }
+        
+        if($latestAttendanceEndTime){
+            return redirect('/');
+        }
         
         $latestAttendance->update([
             'end_time' => Carbon::now(),
