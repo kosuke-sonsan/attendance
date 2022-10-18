@@ -50,6 +50,11 @@ Route::group(['middleware' => 'auth'], function(){
   
   Route::get('/attendance', [WorkController::class, 'index'])->name('attendance.view');  
   
+  /*  日付変更用ルーティング  */
+  
+  Route::get('/attendance/date/add', [WorkController::class, 'addDate'])->name('attendance.addDate');
+  Route::get('/attendance/date/sub', [WorkController::class, 'subDate'])->name('attendance.subDate');
+  
 });
 
 

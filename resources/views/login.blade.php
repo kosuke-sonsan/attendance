@@ -1,8 +1,8 @@
 @extends('layouts.auth')
 
-@section('content')
+@section('title', 'login')
 
-<!--  login  -->
+@section('content')
 
   <div class="login_main">
     
@@ -21,4 +21,5 @@
     </a>
     
   </div>
+
 @endsection
